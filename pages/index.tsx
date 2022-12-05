@@ -1,3 +1,9 @@
+import { SlackLoginButton } from '../components/SlackLoginButton'
+
 export default function Home() {
-  return <div>Hello World!</div>
+  return (
+    <div className="Login">
+      <SlackLoginButton />
+    </div>
+  )
 }
