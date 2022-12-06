@@ -7,7 +7,7 @@ const nextConfig = {
       {
         // Fix Slack API CORS error Client Side
         source: '/api/slack/:path*',
-        destination: `${process.env.SLACK_API_BASE_URL}/api/:path*`,
+        destination: `${process.env.SLACK_API_BASE_URL}/:path*`,
       },
     ]
   },

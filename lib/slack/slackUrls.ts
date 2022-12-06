@@ -1,6 +1,6 @@
 const slackApiBaseUrl = global.window
   ? `${process.env.NEXT_PUBLIC_SLACK_API_BASE_URL}/`
-  : `${process.env.SLACK_API_BASE_URL}/api`
+  : `${process.env.SLACK_API_BASE_URL}`
 const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
 
 export const slackUrls = {

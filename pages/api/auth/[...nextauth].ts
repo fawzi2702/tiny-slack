@@ -12,13 +12,13 @@ export const authOptions: NextAuthOptions = {
           response_type: 'code',
         },
       },
-      accessTokenUrl: process.env.SLACK_TOKEN_URL,
+      accessTokenUrl: process.env.SLACK_AUTH_URL,
       idToken: true,
     }),
   ],
   callbacks: {
     redirect() {
-      return process.env.CLIENT_SIGNED_IN_URL
+      return '/tiny-slack'
     },
     jwt({ token, account, user }) {
       if (user) {
@@ -36,9 +36,9 @@ export const authOptions: NextAuthOptions = {
     },
   },
   pages: {
-    signIn: process.env.CLIENT_ACCESS_DENIED_URL,
+    signIn: '/',
   },
-  // debug: process.env.NODE_ENV === 'development',
+  debug: process.env.NODE_ENV === 'development',
 }
 
 export default NextAuth(authOptions)
