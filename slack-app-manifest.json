@@ -1,0 +1,41 @@
+{
+  "display_information": {
+      "name": "Capsule Bot",
+      "description": "tiny-slack bot",
+      "background_color": "#323336"
+  },
+  "features": {
+      "bot_user": {
+          "display_name": "Capsule Assessment",
+          "always_online": false
+      }
+  },
+  "oauth_config": {
+      "redirect_urls": [
+          "http://localhost:3000"
+      ],
+      "scopes": {
+          "user": [
+              "channels:history",
+              "channels:read",
+              "groups:read",
+              "im:read",
+              "mpim:read",
+              "team:read",
+              "chat:write"
+          ],
+          "bot": [
+              "chat:write.customize",
+              "chat:write"
+          ]
+      }
+  },
+  "settings": {
+      "interactivity": {
+          "is_enabled": true
+      },
+      "org_deploy_enabled": false,
+      "socket_mode_enabled": false,
+      "token_rotation_enabled": false
+  }
+}

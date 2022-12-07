@@ -14,15 +14,7 @@ features:
 	
  **1. Slack App**
 	Next, you must have a Slack app. If you don't have one, you can create one [here](https://api.slack.com/apps). 
-	Your Slack app must have these following scopes:
-	- *channels:history*
-	- *channels:read*
-	- *chat:write*
-	- *groups:read*
-	- *im:read*
-	- *mpim:read*
-	- *team:read*
-	You can add these scopes from **OAuth & Permissions** panel, in the **Scopes** section
+	You can create your app with the `slack-app-manifest.json` file in the root of the project to help you.
 
 **2. Environment variables**
 	This program need some environment variables that must be specified in *.env* file, that's in the root of the progam
