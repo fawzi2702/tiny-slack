@@ -10,7 +10,12 @@ export const fetchMembers = async (token: string) => {
         Authorization: formatBearerToken(token),
       },
     })
-    return transformMembers(data.members)
+
+    if (data.ok) {
+      return transformMembers(data?.members)
+    } else {
+      return []
+    }
   } catch (error) {
     console.error(error)
     throw error

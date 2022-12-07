@@ -17,14 +17,14 @@ const Message: FC<MessageProps> = ({ message }) => {
     <Row className="flex-shrink-1 justify-content-end align-items-start my-1">
       <Col className="flex-shrink-1" xs="auto">
         <img
-          src={sender.avatar}
-          alt="avatar"
+          src={sender?.avatar}
+          alt=""
           className="rounded-1"
-          style={{ width: '25px', height: '25px' }}
+          style={{ width: '25px', height: '25px', background: '#f9f9f9r' }}
         />
       </Col>
       <Col className="flex-shrink-1">
-        <p className="fw-bold mb-1">{sender.name}</p>
+        <p className="fw-bold mb-1">{sender?.name || message.userId}</p>
         <pre>{message.text}</pre>
       </Col>
     </Row>
