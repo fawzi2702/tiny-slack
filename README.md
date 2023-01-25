@@ -1,4 +1,4 @@
-# Capsule Assesment
+# Tiny Slack
 This program provides a small slack client
 
 features:
